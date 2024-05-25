@@ -28,7 +28,9 @@ This example shows how to running the breeding program optimization of a three-w
 If you successfully finish the running, you will see these:
 Analyse finish!
 Results generated in: xxxx 
-Time difference of 30.48747 mins
+Time difference of XXX mins
+
+
 
 
 
