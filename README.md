@@ -25,4 +25,10 @@ runOpt(prm_path = "prm_Opt.txt")
 
 This example shows how to running the breeding program optimization of a three-way crossbreeding system under a fixed number of final production. To save time, we set QUICK as TRUE.
 
+If you successfully finish the running, you will see these:
+Analyse finish!
+Results generated in: xxxx 
+Time difference of 30.48747 mins
+
+
 
