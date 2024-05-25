@@ -6,6 +6,7 @@ install.packages("GOplan_0.1.0.tar.gz",repos = NULL)
 
 # demo
 All the example files are stored in folder "example_prm".
+
 Example 1:
 runCore(prm_path = "prm_Core.txt")
 This example shows how to running nucleus population breeding program with a varaible "Yd"(the productive lifetime of dams in population). To save time, we set QUICK as TRUE.
