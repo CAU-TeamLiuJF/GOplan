@@ -21,9 +21,12 @@ This example shows how to running the breeding program evaluation of a three-way
 
 Example 3:
 
-runOpt(prm_path = "prm_Opt.txt")
+res = runOpt(prm_path = "prm_Opt.txt")
+
+getOptRes(res = res, out_path = out_path) # transfer the results to xlsx file
 
 This example shows how to running the breeding program optimization of a three-way crossbreeding system under a fixed number of final production. To save time, we set QUICK as TRUE.
+
 
 If you successfully finish the running, you will see these:
 Analyse finish!
