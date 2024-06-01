@@ -5,7 +5,7 @@ R package for managing breeding programs。
 install.packages("GOplan_0.1.0.tar.gz",repos = NULL)
 
 # demo
-All the example files are stored in folder "example_prm".
+All the example files are stored in folder "example_prm". Note: before you run the example, you should change the "out_path" in the example parameter files.
 
 Example 1:
 
