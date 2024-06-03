@@ -1,0 +1,125 @@
+#####################################
+## Example parameters for runCore()##
+#####################################
+## Note: Fill the parmaters you do not need by 0.
+## Analyse Parameters: Specify the basic analyse information, do not use 0.
+## VARIABLES: Variable numbers can be 0~n, one variable with one line, 
+##            and you should list all the levels separated by blank. 
+## Optimize Parameters: manage the range of each optimize parameter.
+## Population Structure: necessary parameters to construct population.
+## Breeds Details: descibe all the breeds' detail information one by one, at least one. 
+## Economic Parameters: different cols indicate the economic influence 
+##			  when different phenotype changes one unit;
+##			  "0" in "trait" line indicate the initial economic pars.
+
+### Analyse Parameters ###
+QUICK        FALSE                         #FALSE/TRUE
+Method       blup                          #blup/ssgblup
+EarlySelect  FALSE
+Lit_pro      0
+Mate         rand                          #mating method：rand/MC/HOMO/HETER
+maxF        -999
+Ctype        1                             #type of crossbreeding: 1,2*,3*,4*
+Nrep         50                            
+Time         20                            
+Ncores       8
+nChr         18                            #number of simulated chromosomes
+nSnpPerChr   3000                          #number of SNP per chr
+nQtlPerChr   100                           #number of QTL per chr
+createFounder TRUE
+out_path     C:/Users/h/Desktop/res/       #path of outfile 
+
+#-------------------------------------------------------------------------------------------------#
+### VARIABLES ###   
+Yd       2 3 4 5 6       
+
+#-------------------------------------------------------------------------------------------------#
+### Optimize Parameters ###
+Pars         lower   upper
+Asec         0       0                    #longevity of mutiplier A
+Bsec         0       0                    #longevity of mutiplier B
+Csec         0       0                    #longevity of mutiplier C
+Dsec         0       0                    #longevity of mutiplier D
+YABd         0       0                    #longevity of hybrid dam AB
+YCDs         0       0                    #longevity of hybrid sire CD
+NAd          0       0                    #female size of nucleus A 
+NBd          0       0                    #female size of nucleus B
+NCd          0       0                    #female size of nucleus C
+NDd          0       0                    #female size of nucleus D
+
+#-------------------------------------------------------------------------------------------------#
+### Population Structure ###
+dam0         2                            #age of dams when firstborn
+sire0        2                            #age of sires when firstborn
+YABd         6                            #longevity of hybrid dam AB
+cull_AB      0  0  0  0  0                #cull rates of each age in AB(numbers should be one less than longevity)
+YCDs         4                            #longevity of hybrid sire CD
+cull_CD      0  0  0                      #cull rates of each age in CD
+SorAB        100                          #Mating ratio when AB cross
+SorCD        100                          #Mating ratio when CD cross
+SorP         100                          #Mating ratio of terminal cross
+ABSR         0.85                         #survival rate of AB
+CDSR         0.85                         #survival rate of CD
+PSR          0.85                         #survival rate of products
+## must fill when running optimization
+N_P          0                            #expected number of products
+nPoints      0                            #number of selected points each iteration
+nIter        0                            #number of iterations
+
+Breed        A       B       C       D    #Breeds：A:dam of dam line;B:sire of dam line;C:sire line
+n_female     500     0       0       0    #female size
+Sor          50      0       0       0    #mate ratio
+Ys           2       0       0       0    #longevity of sires
+Yd           4       0       0       0    #longevity of dams
+n_progeny    12      0       0       0    #litter size
+SR           0.85    0       0       0    #survival rate of offspring
+nSec         3000    0       0       0    #size of mutiplier, A must be speicified
+Ysec         6       0       0       0    #longevity of mutiplier
+nPedG        3       0       0       0    #the number of generations traced for generating pedigree
+nGenoG       3       0       0       0    #the number of generations traced for generating genotype file
+nSel_F       2       0       0       0    #the number of female selected per litter
+nSel_M       2       0       0       0    #the number of male selected per litter
+nfam_F       6       0       0       0    #number of phenotyping females per litter
+nfam_M       6       0       0       0    #number of phenotyping males per litter
+nGeno_F      0       0       0       0    #number of genotyping females per litter
+nGeno_M      0       0       0       0    #number of genotyping males per litter
+
+#-------------------------------------------------------------------------------------------------#
+### Breeds Details ###
+Breedname   A    
+cull_s      0                             #cull rates of each age in sires
+cull_d      0     0     0                 #cull rates of each age in dams
+cull_sec    0     0     0     0     0     #cull rates of each age in multipliers
+trait       CZS     JZRL    JZBB          #names of considering traits
+SexLimit    2       0       0             #0: non-limiting trait, 1: trait that only for male, 2: trait only for female
+mean        12      180     12            #means of traits
+var         8	    100	    6             #phenotype variances of traits
+heri        0.1     0.3     0.5           #heritabilities of traits
+weigh       0.6    -0.3    -0.1           #weight coefficients of traits
+analyse     1       2       2             #analyse method:"1" means single trait, other same numbers means multiple traits
+## phenotype cov ##
+CZS         1       0       0             #the cov matrix of traits, must be symmetric.
+JZRL        0       1      -0.3   
+JZBBH       0      -0.3     1 
+
+#-------------------------------------------------------------------------------------------------#
+### Economic Parameters ###
+trait       0       CZS    JZRL    JZBBH    
+jb_cost     906     0      1.5      0     #basic cost per individual
+dam_cost    1500    0      0        0     #dam cost per individual
+sire_cost   1000    0      0        0     #sire cost per individual
+other_cost  0      0      0        0     #other cost each season
+ind_sale    2040    0      0       -12    #income of selling a product
+cull_sale   1500    0      0        0     #income of culling
+sire_sale   3000    0      0        0     #income of selling a sire
+dam_sale    2000    0      0        0     #income of selling a dam
+meas_cost   20                            #phenotyping cost per individual
+geno_cost   200                           #genotyping cost per individual
+
+
+
+
+
+
+
+
