@@ -25,9 +25,9 @@ Mate        rand                        #mating method：rand/MC/HOMO/HETER
 Gmate       FALSE
 maxF        999
 Ctype		33							#type of crossbreeding: 1,2*,3*,4*
-Nrep		4							#number of repetition
+Nrep		2							#number of repetition
 Time		5							#time bucket of breeding cycle
-Ncores		4							#number of threads
+Ncores		2							#number of threads
 nChr		18							#number of simulated chromosomes
 nSnpPerChr	3000						#number of SNP per chr
 nQtlPerChr	100							#number of QTL per chr
