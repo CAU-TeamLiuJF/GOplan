@@ -2,6 +2,8 @@
 R package for managing breeding programs。
 
 # INSTALLATION
+Compressed R package are stored in branch "Rpackage".
+
 For Windows user： install.packages("GOplan_0.1.0_windows.tar.gz",repos = NULL)
 
 For Linux user： install.packages("GOplan_0.1.0_Linux.tar.gz",repos = NULL)
