@@ -13,6 +13,8 @@ All the example files are stored in folder "example_prm". Note: before you run t
 
 Example 1:
 
+setwd("./example_pam")
+
 runCore(prm_path = "prm_Core.txt")
 
 This example shows how to running nucleus population breeding program with a varaible "Yd"(the productive lifetime of dams in population). To save time, we set QUICK as TRUE.
