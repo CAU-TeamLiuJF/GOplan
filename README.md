@@ -13,7 +13,7 @@ All the example files are stored in folder "example_prm". Note: before you run t
 
 Example 1:
 
-setwd("./example_pam")
+setwd("./example_prm")
 
 runCore(prm_path = "prm_Core.txt")
 
