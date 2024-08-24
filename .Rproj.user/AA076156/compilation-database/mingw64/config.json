@@ -1,0 +1,27 @@
+{
+    "args": [
+        "-std=gnu++11",
+        "-IC:/PROGRA~1/R/R-42~1.3/include",
+        "-DNDEBUG",
+        "-DARMA_64BIT_WORD=1",
+        "-fopenmp",
+        "-IC:/Users/19860/AppData/Local/R/win-library/4.2/Rcpp/include",
+        "-IC:/Users/19860/AppData/Local/R/win-library/4.2/RcppArmadillo/include",
+        "-DEIGEN_DONT_VECTORIZE",
+        "-nostdinc",
+        "-Ic:/rtools42/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/10.4.0/include/c++",
+        "-Ic:/rtools42/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/10.4.0/include/c++/x86_64-w64-mingw32.static.posix",
+        "-Ic:/rtools42/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/10.4.0/include/c++/backward",
+        "-Ic:/rtools42/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/10.4.0/include",
+        "-Ic:/rtools42/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/10.4.0/../../../../include",
+        "-Ic:/rtools42/x86_64~1.pos/bin/../lib/gcc/x86_64-w64-mingw32.static.posix/10.4.0/include-fixed",
+        "-include",
+        "D:/备份/GOplan/.Rproj.user/AA076156/compilation-database/mingw64/cpp-definitions.h"
+    ],
+    "pch": "RcppArmadillo",
+    "is_cpp": true,
+    "hash": "172411800816834271441683427144",
+    "compiler": "17486434899767519736",
+    "rversion": "4.2.3",
+    "dbversion": 4
+}

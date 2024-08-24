@@ -1,0 +1,31 @@
+Package: GOplan
+Title: R package for managing and optimizing breeding programs
+Version: 0.1.0
+Authors@R: 
+  c(person("Qianqian", "Huang",  
+    role=c("aut", "cre"),
+    email="hqq0111@gmail.com")
+  )
+Description: Using stochastic simulation and gene flow method to 
+    compare different breeding programs and predict economic profits,
+    using Bayesian Optimization to find an optimized breeding plans.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+    AlphaSimR, 
+    parallel, 
+    writexl, 
+    readxl, 
+    stringr, 
+    foreach, 
+    mlrMBO, 
+    DiceKriging, 
+    pedigree,
+    progress,
+    tidyverse,
+    Rcpp (>= 1.0.10),
+    RcppArmadillo
+LinkingTo: Rcpp, RcppArmadillo
+Author: Qianqian Huang [aut, cre]
+Maintainer: Qianqian Huang <hqq0111@gmail.com>
+RoxygenNote: 7.3.1
