@@ -27,9 +27,7 @@ Note: To save time, we set QUICK as TRUE. You could also compare the two-way or 
 
 ## Example 3: running the breeding program optimization of a three-way crossbreeding system under a fixed number of final productions.
 
-res = runOpt(prm_path = "prm_Opt.txt")
-
-getOptRes(res = res, out_path = out_path) # transfer the results to xlsx file
+runOpt(prm_path = "prm_Opt.txt")
 
 Note: To save time, we set QUICK as TRUE. This function uses the Bayesian Optimization method to find the optimized program. You can define the number of iterations and selected points in each iteration through the parameter file in the "Population Structure" section. The goal is to find the breeding program that yields more profit by optimizing the productive lifetime of each subpopulation and the female size of the nucleus.
 
