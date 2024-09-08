@@ -27,13 +27,18 @@ run_dmu = function(dmu_module = 'dmuai',
 				   DIR_path = DIR_path){
   # 复制dmu程序和.bat或.sh脚本到工作目录
   if (Sys.info()["sysname"]=="Linux") {
-	file.copy(from = system.file("extra_code","run_dmuai.sh", package = "GOplan"), to = DIR_path)
+	  file.copy(from = system.file("extra_code","run_dmuai.sh", package = "GOplan"), to = DIR_path)
     file.copy(from = system.file("dmu","dmu1", package = "GOplan"), to = DIR_path)
     file.copy(from = system.file("dmu",dmu_module, package = "GOplan"), to = DIR_path)
-	system(paste0("chmod 777 -R ", DIR_path))
+	  system(paste0("chmod 777 -R ", DIR_path))
+  } else if (Sys.info()["sysname"]=="Darwin") {
+    file.copy(from = system.file("extra_code","run_dmuai_mac.sh", package = "GOplan"), to = DIR_path)
+    file.copy(from = system.file("dmu_mac","dmu1", package = "GOplan"), to = DIR_path)
+    file.copy(from = system.file("dmu_mac",dmu_module, package = "GOplan"), to = DIR_path)
+    system(paste0("chmod 777 -R ", DIR_path))
   } else {
     file.copy(from = system.file("extra_code","run_dmuai.bat", package = "GOplan"), to = DIR_path)
-	file.copy(from = system.file("dmu","dmu1.exe", package = "GOplan"), to = DIR_path)
+	  file.copy(from = system.file("dmu","dmu1.exe", package = "GOplan"), to = DIR_path)
     file.copy(from = system.file("dmu",paste0(dmu_module,".exe"), package = "GOplan"), to = DIR_path)
   }
   # run DMU
@@ -41,7 +46,10 @@ run_dmu = function(dmu_module = 'dmuai',
     system(paste0(DIR_path, "/run_",dmu_module,".sh ", DIR_path, '/dmu'))
     file.remove(c("dmu1",dmu_module))
     file.remove(list.files(pattern = "*.sh"))
-
+  } else if (Sys.info()["sysname"]=="Darwin") {
+    system(paste0(DIR_path, "/run_",dmu_module,"_mac.sh ", DIR_path, '/dmu'))
+    file.remove(c("dmu1",dmu_module))
+    file.remove(list.files(pattern = "*.sh"))
   } else {
     system(paste0(DIR_path, "/run_",dmu_module,".bat ", DIR_path, '/dmu'))
     file.remove(list.files(pattern = "*.exe"))

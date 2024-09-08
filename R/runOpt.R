@@ -294,7 +294,8 @@ runOpt <- function(prm_path = prm_path){
 
 # Generated outputs ----
   results <- as.data.frame(run$opt.path)
-  save(results, file = paste0(out_path, 'results.RData'))
+  write.csv(results[, 1:(ncol(results)-10)], paste0(out_path, 'Opt_results.csv'), row.names = F, quote = F)
+  #save(results, file = paste0(out_path, 'results.RData'))
 	sink()
 	cat("Analyse finish!\n")
 	cat("Results generated in:", out_path, "\n")
