@@ -14,7 +14,7 @@ if [ "$1" == "-np" ]; then
 fi
 
 FN="$1.DIR"
-if [ -d "$FN" ]; then
+if [ -f "$FN" ]; then
   echo "Starting DMU with $1.DIR as directive file"
   if [ "$MKL_NUM_THREADS" -gt 1 ]; then
     echo "Running on $MKL_NUM_THREADS CPU/Cores"
