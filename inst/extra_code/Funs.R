@@ -35,7 +35,7 @@ run_dmu = function(dmu_module = 'dmuai',
     file.copy(from = system.file("extra_code","run_dmuai_mac.sh", package = "GOplan"), to = DIR_path)
     file.copy(from = system.file("dmu_mac","dmu1", package = "GOplan"), to = DIR_path)
     file.copy(from = system.file("dmu_mac",dmu_module, package = "GOplan"), to = DIR_path)
-    system(paste0("chmod 777 -R ", DIR_path))
+    system(paste0("chmod -R +x ", DIR_path))
   } else {
     file.copy(from = system.file("extra_code","run_dmuai.bat", package = "GOplan"), to = DIR_path)
 	  file.copy(from = system.file("dmu","dmu1.exe", package = "GOplan"), to = DIR_path)
